@@ -1,4 +1,5 @@
-﻿using NewsAPI.Models;
+﻿using NewsAPI.Dtos;
+using NewsAPI.Models;
 
 namespace NewsAPI.Services
 {
@@ -6,5 +7,6 @@ namespace NewsAPI.Services
     {
         Task<List<int>> GetTopStoriesAsync();
         Task<NewsStory?> GetStoryByIdAsync(int id);
+        Task<List<NewsStoryDto>> GetTopNBestStoriesAsync(int n);
     }
 }

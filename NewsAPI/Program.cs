@@ -11,6 +11,8 @@ namespace NewsAPI
 
             // Add services to the container.
 
+            builder.Services.AddMemoryCache();
+
             builder.Services.AddControllers();
             builder.Services.AddHttpClient<INewsService, NewsService>();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

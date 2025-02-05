@@ -27,5 +27,14 @@ namespace NewsAPI.Controllers
             var story = await _newsService.GetStoryByIdAsync(id);
             return story != null ? Ok(story) : NotFound();
         }
+
+        [HttpGet("best-n-stories")]
+        public async Task<IActionResult> GetBestStories([FromQuery] int n)
+        {
+            var stories = await _newsService.GetTopNBestStoriesAsync(n);
+
+            return Ok(stories);
+        }
+
     }
 }

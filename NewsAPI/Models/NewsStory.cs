@@ -7,5 +7,6 @@
         public string By { get; set; } = string.Empty;
         public int Score { get; set; }
         public long Time { get; set; }
+        public int Descendants { get; set; }
     }
 }
