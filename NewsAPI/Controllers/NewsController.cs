@@ -29,7 +29,7 @@ namespace NewsAPI.Controllers
         }
 
         [HttpGet("best-n-stories")]
-        public async Task<IActionResult> GetBestStories([FromQuery] int n)
+        public async Task<IActionResult> GetBestNStories([FromQuery] int n)
         {
             var stories = await _newsService.GetTopNBestStoriesAsync(n);
 
