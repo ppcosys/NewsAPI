@@ -72,5 +72,6 @@ namespace NewsAPI.Services
 
             return bestNStories;
         }
+
     }
 }
